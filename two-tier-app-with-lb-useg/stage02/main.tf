@@ -109,19 +109,19 @@ resource "vsphere_virtual_machine" "app" {
     }
   }
 
-  connection {
+  connection {                                                                              ### Addition from stage01 ###
     type     = "ssh"
     user     = "vmware"
     password = var.app_password
     host     = "${lookup(var.app_vms[count.index], "ipv4_address")}"
   }
 
-  provisioner "file" {
+  provisioner "file" {                                                                      ### Addition from stage01 ###
     source      = "html/index.html"
     destination = "/home/vmware/index.html"
   }
 
-  provisioner "remote-exec" {
+  provisioner "remote-exec" {                                                               ### Addition from stage01 ###
     inline = [
       "echo ${var.app_password} | sudo -S apt-get update",
       "sudo apt-get install -y apache2",
