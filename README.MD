@@ -11,7 +11,7 @@ howto:
 
 for each folder, cd into the folder and run:
 
-**terraform init** - this downloads the providers required.
+**terraform init** - this downloads the providers required.<br/>
 **terraform plan** - this will validate that everything is in order.
 **terraform apply** - this will run the terraform script and deploy the infrastructure
 
