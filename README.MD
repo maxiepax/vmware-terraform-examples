@@ -7,4 +7,4 @@ stage02 creates a T1 router, logical segment, and provisions application to the 
 stage03 adds load balancer with ssl termination, and microsegmentation.<br/>
 
 Credits:
-Thank you [Ryan](https://github.com/tenthirtyam) for help with cloning from catalogue and a lot of other good examples.
+Thank you [Ryan Johnson](https://github.com/tenthirtyam) for help with cloning from catalogue and a lot of other good examples.
