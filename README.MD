@@ -5,3 +5,6 @@ Most of these are work in progress, they work, but may not have all functionalit
 stage01 starts with just deploying VMs onto a portgroup, no load balancer, no security<br/>
 stage02 creates a T1 router, logical segment, and provisions application to the segment, no load balancer, no security.<br/>
 stage03 adds load balancer with ssl termination, and microsegmentation.<br/>
+
+Credits:
+Thank you [Ryan](https://github.com/tenthirtyam) for help with cloning from catalogue and a lot of other good examples.
