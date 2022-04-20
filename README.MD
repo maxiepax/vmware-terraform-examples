@@ -1,22 +1,10 @@
-This is a 3 stage demo that adds functionality for each stage.
+These are some examples that i've written in terraform that showcase usecases of using Terraform against VMwares SDDC.
+Most of these are work in progress, they work, but may not have all functionality i would have wanted.
 
-Stage01 will clone VMs to an existing portgroup, and adds no functionality like loadbalancer or security.
+**two-tier-app-with-lb-useg** - demo that shows the 3 stages of automation. <br/>
+stage01 starts with just deploying VMs onto a portgroup, no load balancer, no security<br/>
+stage02 creates a T1 router, logical segment, and provisions application to the segment, no load balancer, no security.<br/>
+stage03 adds load balancer with ssl termination, and microsegmentation.<br/>
 
-Stage02 will instead create a T1 router, use a logical segment, and deploy a loadbalancer for only HTTP.
-
-Stage03 will implement a loadbalancer with a certificate, and implement microsegmentation for the application.
-Please note you are required to upload your own signed certificate, along with CA certicate to NSX-T before running script.
-
-howto:
-
-for each folder, cd into the folder and run:
-
-**terraform init** - this downloads the providers required.
-
-**terraform plan** - this will validate that everything is in order.
-
-**terraform apply** - this will run the terraform script and deploy the infrastructure
-
-Now validate that everything looks as expected. Before running the next stage:
-
-**terraform destroy** - to remove everything created and clean up for next stage.
+Credits:
+Thank you [Ryan Johnson](https://github.com/tenthirtyam) for help with cloning from catalogue and a lot of other good examples.
